@@ -26,10 +26,10 @@
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Cos'é ?</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Oggetti</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Dockerfile</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Social</a>
+      <a href="#cosè" class="w3-bar-item w3-button w3-padding-large">Cos'é ?</a>
+      <a href="#oggetti" class="w3-bar-item w3-button w3-padding-large">Oggetti</a>
+      <a href="#architettura" class="w3-bar-item w3-button w3-padding-large">Dockerfile</a>
+      <a href="#social" class="w3-bar-item w3-button w3-padding-large">Social</a>
     </div>
   </div>
 
@@ -84,7 +84,7 @@
       </div>
     </div>
   </div>
-
+<!-- Thirt Grid -->
   <div class="w3-row-padding w3-padding-64 w3-container" id="oggetti">
     <div class="w3-content">
       <div class="w3-twothird">
@@ -112,7 +112,7 @@
 
     </div>
   </div>
-
+<!-- Fourth Grid -->
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="dockerfile">
     <div class="w3-content">
       <div class="w3-third w3-center">
@@ -121,8 +121,8 @@
           <div class="w3-code htmlHigh notranslate  w3-pale-blue w3-text-deep-purple">
             FROM node:12-alpine<br>
             RUN apk add --no-cache python g++ make<br>
-            WORKDIR /app
-            COPY . .
+            WORKDIR /app<br>
+            COPY . .<br>
             RUN yarn install --production<br>
             CMD ["node", "src/index.js"]<br>
           </div>
@@ -132,17 +132,40 @@
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Dockerfile</h1>
 
-        <p class="w3-text-grey">Prova
+        <p class="w3-text-grey">Il dockerfile è un file di testo che contiene varie info
+          fondamentali per la creazione dell'immagine.</p>
+        <p class="w3-text-grey">Nel dockerfile vanno specificate vari dati, come il linguaggio 
+          di programmazione che vogliamo usare per l'immagine e qual è la directory del nostro
+          progetto. 
         </p>
-        <p class="w3-text-grey">Prova
-        </p>
-        <p class="w3-text-grey">Prova
+        <p class="w3-text-grey">Questo file verrà tradotto da Docker Engine e verrà trasformato
+          nell'immagine che necessitiamo.
         </p>
       </div>
     </div>
   </div>
 
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="dockerfile">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <div class="w3-panel w3-card w3-animate-opacity w3-blue">
+          <h4>Commands</h4>
+          <div class="w3-code htmlHigh notranslate  w3-pale-blue w3-text-deep-purple">
+            docker build<br><br>
+            docker run
+          </div>
+        </div>
+      </div>
 
+      <div class="w3-twothird">
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">Comandi Docker</h1>
+
+        <p class="w3-text-grey"></p>
+        <p class="w3-text-grey"></p>
+        <p class="w3-text-grey"></p>
+      </div>
+    </div>
+  </div>
 
   <div class="w3-container w3-grey w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge">??</h1>
@@ -161,18 +184,6 @@
     <p>Info by <a href="https://www.docker.com/" target="_blank">docker official website</a></p>
   </footer>
 
-  <script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-  </script>
-
+<script src="main.js"></script>
 </body>
-
 </html>
