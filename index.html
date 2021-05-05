@@ -13,22 +13,23 @@
 <body>
   <!-- Navbar -->
   <div class="w3-top">
-    <div class="w3-bar w3-blue w3-card w3-left-align w3-large" id="">
+    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
         href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/home.png"></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Info</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Footer</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/home.png"></a>
+      <a href="#cosè" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cos'é ?</a>
+      <a href="#oggetti" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Oggetti</a>
+      <a href="#architettura" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Architettura</a>
+      <a href="#dockerfile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dockerfile</a>
+      <a href="#social" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Social</a>
     </div>
    
     <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Cos'é ?</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Oggetti</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Dockerfile</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Social</a>
     </div>
   </div>
 
@@ -40,17 +41,15 @@
   </header>
 
   <!-- First Grid -->
-  <div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-padding-64 w3-container" id="cosè">
     <div class="w3-content">
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-left">Cos'è Docker?</h1>
         <p class="w3-text-grey">Docker è una piattaforma software che
-          ci permette di creare, distribuire applicazioni molto rapidamente.
+          ci permette di creare, sviluppare e distribuire applicazioni molto rapidamente.
         </p>
         <p class="w3-text-grey">Docker utilizza degli ambienti isolati di
-          sviluppo chiamati Container.
-        </p>
-        <p class="w3-text-grey">Questi ambienti leggeri e veloci permettono
+          sviluppo chiamati Container. Questi ambienti leggeri e veloci permettono
           a sviluppatori e amministratori di creare, spedire e eseguire app
           a basso costo e su qualsiasi scala.
         </p>
@@ -63,7 +62,7 @@
   </div>
 
   <!-- Second Grid -->
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-hover-light-grey w3-padding-64 w3-container" id="architettura">
     <div class="w3-content">
       <div class="w3-third w3-center">
         <img src="img/cs.png">
@@ -89,22 +88,22 @@
     </div>
   </div>
 
-  <div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-padding-64 w3-container" id="oggetti">
     <div class="w3-content">
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-left">Oggetti Docker</h1>
-        <h5 class="w3-padding-32">In questo universo virtuale esistono vari
+        <p class="w3-text-grey">In questo universo virtuale esistono vari
           "oggetti" che rendono possibile la magia di Docker.
-        </h5>
+        </p>
 
-        <p class="w3-text-grey">Le immagini; sono modelli di sola lettura
+        <p class="w3-text-grey">Le immagini sono modelli di sola lettura
           per la creazione dei containers.
         </p>
-        <p class="w3-text-grey">I container; sono istanze eseguibili
+        <p class="w3-text-grey">I container sono istanze eseguibili
           di una certa immagine, si possono creare, avviare, arrestare,
           spostare ed eliminare.
         </p>
-        <p class="w3-text-grey">I registry; sono luoghi comuni a tutti
+        <p class="w3-text-grey">I registry sono luoghi comuni a tutti
           gli utenti in cui vengono memorizzate immagini già pronte
           per essere scaricate e usate (Docker Hub).
         </p>
@@ -117,10 +116,10 @@
     </div>
   </div> 
   
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-hover-light-grey w3-padding-64 w3-container" id="dockerfile">
     <div class="w3-content">
       <div class="w3-third w3-center">
-        <div class="w3-panel w3-card w3-light-grey">
+        <div class="w3-panel w3-card w3-animate-opacity w3-blue">
           <h4>Dockerfile</h4>
           <div class="w3-code htmlHigh notranslate  w3-pale-blue w3-text-deep-purple">
             FROM node:12-alpine<br>
@@ -136,44 +135,15 @@
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Dockerfile</h1>
 
-        <p class="w3-text-black">Sono gay gay gay
+        <p class="w3-text-grey">Sono gay gay gay
         </p>
-        <p class="w3-text-black">Sono gay gay gay
+        <p class="w3-text-grey">Sono gay gay gay
         </p>
-        <p class="w3-text-black">Sono gay gay gay
+        <p class="w3-text-grey">Sono gay gay gay
         </p>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -183,7 +153,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity" id="social">
     <div class="w3-xlarge w3-padding-32">
       <a href="https://www.instagram.com/dockerinc/" target="_blank"><i
           class="fa fa-instagram w3-hover-opacity"></i></a>
