@@ -3,28 +3,26 @@
 <title>Docker File</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/ico" href="img/dock.png" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
 
-
-
 <body>
-
   <!-- Navbar -->
   <div class="w3-top">
-    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <div class="w3-bar w3-blue w3-card w3-left-align w3-large" id="">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
         href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/home.png"></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Info</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Footer</a>
     </div>
-
+   
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
       <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
@@ -46,10 +44,9 @@
     <div class="w3-content">
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-left">Cos'è Docker?</h1>
-        <h5 class="w3-padding-32">Docker è una piattaforma software che
+        <p class="w3-text-grey">Docker è una piattaforma software che
           ci permette di creare, distribuire applicazioni molto rapidamente.
-        </h5>
-
+        </p>
         <p class="w3-text-grey">Docker utilizza degli ambienti isolati di
           sviluppo chiamati Container.
         </p>
@@ -74,9 +71,9 @@
 
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Architettura Docker</h1>
-        <h5 class="w3-padding-32">Docker è basato su una architettura
+        <p class="w3-text-grey">Docker è basato su una architettura
           Client - Server.
-        </h5>
+        </p>
         <p class="w3-text-grey">Esiste un Client Docker e un Daemon Docker.
           Che sono rispettivamente il Client e il Server del sistema
           , essi comunicano tramite API REST.
@@ -128,24 +125,22 @@
           <div class="w3-code htmlHigh notranslate  w3-pale-blue w3-text-deep-purple">
             FROM node:12-alpine<br>
             RUN apk add --no-cache python g++ make<br>
-            WORKDIR /app<br>
-            COPY . .<br>
+            WORKDIR /app
+            COPY . .
             RUN yarn install --production<br>
-            CMD ["node", "src/index.js"]
+            CMD ["node", "src/index.js"]<br>
           </div>
         </div>
       </div>
 
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Dockerfile</h1>
-        <h5 class="w3-padding-32">Docker è basato su una architettura
-          Client - Server.
-        </h5>
-        <p class="w3-text-grey">Sono gay gay gay
+
+        <p class="w3-text-black">Sono gay gay gay
         </p>
-        <p class="w3-text-grey">Sono gay gay gay
+        <p class="w3-text-black">Sono gay gay gay
         </p>
-        <p class="w3-text-grey">Sono gay gay gay
+        <p class="w3-text-black">Sono gay gay gay
         </p>
       </div>
     </div>
