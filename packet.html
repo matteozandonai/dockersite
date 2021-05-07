@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Docker File</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/ico" href="img/dock.png" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/packet.css">
+
+<body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
+        href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/home.png"></a>
+      <a href="#cosè" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cos'é ?</a>
+      <a href="#oggetti" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Oggetti</a>
+      <a href="#architettura" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Architettura</a>
+      <a href="#dockerfile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dockerfile</a>
+      <a href="#social" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Social</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="#cosè" class="w3-bar-item w3-button w3-padding-large">Cos'é ?</a>
+      <a href="#oggetti" class="w3-bar-item w3-button w3-padding-large">Oggetti</a>
+      <a href="#architettura" class="w3-bar-item w3-button w3-padding-large">Dockerfile</a>
+      <a href="#social" class="w3-bar-item w3-button w3-padding-large">Social</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo w3-animate-fading">PACKET TRACER</h1>
+    <h1 class="w3-margin w3-large w3-animate-bottom">Matteo Zandonai</h1>
+    <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+  </header>
+
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="architettura">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="img/compose.png">
+      </div>
+
+      <div class="w3-twothird">
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">Applicazione di Docker </h1>
+        <p class="w3-text-grey">Docker è basato su una architettura
+          Client - Server.
+        </p>
+        <p class="w3-text-grey">Il Client prende il nome di Client Docker
+          e il Server prende il nome di Daemon, essi comunicano tra loro tramite API REST.
+        </p>
+        <p class="w3-text-grey">Il Daemon ascolta le richieste e gestisce
+          immagini, container, reti e volumi. Il Client invece è colui che esegui i comandi
+          e ordina al Daemon di compiere certe azioni necessarie (build, run,
+          stop, remove).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="img/topologia.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="img/topologia.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="img/topologia.png" style="width:100%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity" id="social">
+    <div class="w3-xlarge w3-padding-32">
+      <a href="https://www.instagram.com/dockerinc/" target="_blank"><i
+          class="fa fa-instagram w3-hover-opacity"></i></a>
+      <a href="https://twitter.com/docker?lang=it" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      <a href="https://it-it.facebook.com/docker.run/" target="_blank"><i
+          class="fa fa-facebook-official w3-hover-opacity "></i></a>
+    </div>
+    <p>Info by <a href="https://www.docker.com/" target="_blank">docker official website</a></p>
+  </footer>
+
+<script src="js/packet.js"></script>
+</body>
+</html>
