@@ -108,3 +108,6 @@ body,h1,h2,h3,h4,h5,h6 {
   to {opacity: 1}
 }
 
+.w3-container{
+  background-color: #dcd9d9;
+}
