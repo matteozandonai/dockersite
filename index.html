@@ -16,18 +16,18 @@
     <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
         href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/home.png"></a>
-      <a href="#cosè" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cos'é ?</a>
-      <a href="#oggetti" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Oggetti</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/casa.png"></a>
+      <a href="#cosè" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cos è?</a>
       <a href="#architettura" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Architettura</a>
-      <a href="#dockerfile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dockerfile</a>
-      <a href="#social" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Social</a>
+      <a href="#immagini" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Immagini</a>
+      <a href="#tooling" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tooling</a>
+      <a href="#dockerfile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File</a>
       <a href="packet.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">PT</a>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="#cosè" class="w3-bar-item w3-button w3-padding-large">Cos'é ?</a>
+      <a href="#cosè" class="w3-bar-item w3-button w3-padding-large"><img src="img/question.png"></a>
       <a href="#oggetti" class="w3-bar-item w3-button w3-padding-large">Oggetti</a>
       <a href="#architettura" class="w3-bar-item w3-button w3-padding-large">Dockerfile</a>
       <a href="#social" class="w3-bar-item w3-button w3-padding-large">Social</a>
@@ -73,38 +73,34 @@
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Architettura Docker</h1>
         <p class="w3-text-grey">Docker è basato su una architettura
-          Client - Server.
+          Client - Server, i componenti principali da conoscere sono tre:
         </p>
-        <p class="w3-text-grey">Il Client prende il nome di Client Docker
-          e il Server prende il nome di Daemon, essi comunicano tra loro tramite API REST.
+        <p class="w3-text-grey">
         </p>
-        <p class="w3-text-grey">Il Daemon ascolta le richieste e gestisce
-          immagini, container, reti e volumi. Il Client invece è colui che esegui i comandi
-          e ordina al Daemon di compiere certe azioni necessarie (build, run,
-          stop, remove).
+        <p class="w3-text-grey">Dockerfile: è un file sul quale vengono scritte le istruzione per
+          costruire l'immagine.
+        </p>
+        <p class="w3-text-grey">Image: è un template usata per eseguire i container.
+        </p>
+        <p class="w3-text-grey">Container: sono processi in esecuzione che contengono il progetto.
         </p>
       </div>
     </div>
   </div>
 <!-- Thirt Grid -->
-  <div class="w3-row-padding w3-padding-64 w3-container" id="oggetti">
+  <div class="w3-row-padding w3-padding-64 w3-container" id="immagini">
     <div class="w3-content">
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-left">Oggetti Docker</h1>
-        <p class="w3-text-grey">In questo universo virtuale esistono vari
-          "oggetti" che rendono possibile la magia di Docker.
+        <h1 class="w3-margin w3-xxlarge w3-animate-left">Immagini Docker</h1>
+        <p class="w3-text-grey">Le immagini create possono essere pushate su cloud
+          in registri privati e pubblici
         </p>
 
-        <p class="w3-text-grey">Le immagini sono modelli di sola lettura
-          per la creazione dei containers.
+        <p class="w3-text-grey">Qualsiasi developer può scaricare un'immagine e ricreare l'ambiente
+          che desidera.
         </p>
-        <p class="w3-text-grey">I container sono istanze eseguibili
-          di una certa immagine, si possono creare, avviare, arrestare,
-          spostare ed eliminare.
-        </p>
-        <p class="w3-text-grey">I registry sono luoghi comuni a tutti
-          gli utenti in cui vengono memorizzate immagini già pronte
-          per essere scaricate e usate (Docker Hub).
+        <p class="w3-text-grey">In altre parole un'immagine può essere usata per creare container
+        infinite volte e in infiniti luoghi.
         </p>
       </div>
 
@@ -114,6 +110,31 @@
 
     </div>
   </div>
+
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="tooling">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="img/desktop.png">
+      </div>
+
+      <div class="w3-twothird">
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">Installazione</h1>
+        <p class="w3-text-grey">Per usare docker bisogna installare il software Docker
+          Desktop, esso permette di vedere tramite gui la lista dei container in esecuzione.
+        </p>
+        <p class="w3-text-grey">
+        </p>
+        <p class="w3-text-grey">Dockerfile: è un file sul quale vengono scritte le istruzione per
+          costruire l'immagine.
+        </p>
+        <p class="w3-text-grey">Image: è un template usata per eseguire i container.
+        </p>
+        <p class="w3-text-grey">Container: sono processi in esecuzione che contengono il progetto.
+        </p>
+      </div>
+    </div>
+  </div>
+
 <!-- Fourth Grid -->
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="dockerfile">
     <div class="w3-content">
@@ -147,7 +168,7 @@
     </div>
   </div>
 
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="dockerfile">
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" >
     <div class="w3-content">
       <div class="w3-third w3-center">
         <div class="w3-panel w3-card w3-animate-opacity w3-blue">
