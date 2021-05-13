@@ -49,7 +49,8 @@
   <div class="w3-row-padding w3-padding-64 w3-container" id="cosè">
     <div class="w3-content">
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-left">Cos'è Docker?</h1>
+        
+        <h1 class="w3-margin w3-xxlarge w3-animate-left">Iniziare con Docker</h1>
         <p class="w3-text-grey">Docker è una piattaforma software che
           ci permette di creare, sviluppare e distribuire applicazioni molto rapidamente.
         </p>
@@ -74,18 +75,18 @@
       </div>
 
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Architettura Docker</h1>
+        <h1 class="w3-margin w3-xlarge w3-animate-right">Architettura Docker</h1>
         <p class="w3-text-grey">Docker è basato su una architettura
           Client - Server, i componenti principali da conoscere sono tre:
         </p>
         <p class="w3-text-grey">
         </p>
-        <p class="w3-text-grey">Dockerfile: è un file sul quale vengono scritte le istruzione per
+        <p class="w3-text-grey"><img src="img/dockerfile-logo.png">  Dockerfile: è un file sul quale vengono scritte le istruzione per
           costruire l'immagine.
         </p>
-        <p class="w3-text-grey">Image: è un template usata per eseguire i container.
+        <p class="w3-text-grey"><img src="img/image-logo.png">  Image: è un template nel quale viene tradotto il Dockerfile.
         </p>
-        <p class="w3-text-grey">Container: sono processi in esecuzione che contengono il progetto.
+        <p class="w3-text-grey"><img src="img/container-logo.png"> Container: sono processi in esecuzione che contengono il progetto.
         </p>
       </div>
     </div>
@@ -94,18 +95,13 @@
   <div class="w3-row-padding  w3-padding-64 w3-container" id="tooling">
     <div class="w3-content">
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-left">Installazione</h1>
-        <p class="w3-text-grey">Per usare docker bisogna installare il software Docker
-          Desktop, esso permette di vedere tramite gui la lista dei container in esecuzione.
+        <h1 class="w3-margin w3-xlarge w3-animate-left">Installazione</h1>
+        <p class="w3-text-grey">Docker può essere utilizzato a riga di comando
+          oppure tramite l'apposito docker desktop, il software che ci permette
+          di visuallizare le immagini e i container in esecuzione.
         </p>
-        <p class="w3-text-grey">
-        </p>
-        <p class="w3-text-grey">Dockerfile: è un file sul quale vengono scritte le istruzione per
-          costruire l'immagine.
-        </p>
-        <p class="w3-text-grey">Image: è un template usata per eseguire i container.
-        </p>
-        <p class="w3-text-grey">Container: sono processi in esecuzione che contengono il progetto.
+        <p class="w3-text-grey">Per utilizzare Docker durante lo sviluppo delle
+          applicazioni sul proprio IDE bisogna installare l'apposita estensione.
         </p>
       </div>
       <div class="w3-third w3-center">
@@ -121,13 +117,10 @@
         <img src="img/node.png">
       </div>
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Immagini Docker</h1>
+        <h1 class="w3-margin w3-xlarge w3-animate-right">Immagini Docker</h1>
         <p class="w3-text-grey">Le immagini create possono essere pushate su cloud
-          in registri privati e pubblici
-        </p>
-
-        <p class="w3-text-grey">Qualsiasi developer può scaricare un'immagine e ricreare l'ambiente
-          che desidera.
+          in registri privati e pubblici, così facendo qualsiasi developer può scaricare 
+          un'immagine e ricreare l'ambiente che desidera.
         </p>
         <p class="w3-text-grey">In altre parole un'immagine può essere usata per creare container
         infinite volte e in infiniti luoghi.
@@ -156,16 +149,16 @@
       </div>
 
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Dockerfile</h1>
-
-        <p class="w3-text-grey">Il dockerfile è un file di testo che contiene varie info
-          fondamentali per la creazione dell'immagine.</p>
-        <p class="w3-text-grey">Nel dockerfile vanno specificate vari dati, come il linguaggio 
-          di programmazione che vogliamo usare per l'immagine e qual è la directory del nostro
-          progetto. 
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">Dockerfile e praticità</h1>
+        <p class="w3-text-grey">Il dockerfile è un file di testo essenziale che contiene varie 
+          informazioni usate per la creazione dell'immagine.</p>
+        <p class="w3-text-grey">Nel dockerfile vanno riportate varie specifiche che rappresentano
+          le caratteristiche dell'immagine che desideriamo, nella tabella è riportato un 
+          esempio di Dockerfile.
         </p>
-        <p class="w3-text-grey">Questo file verrà tradotto da Docker Engine e verrà trasformato
-          nell'immagine che necessitiamo.
+        <p class="w3-text-grey">Il Dockerfile verrà tradotto e trasformato
+          nell'immagine, l'immagine in seguito può essere visualizzata sulla dashboard
+          di docker desktop.
         </p>
       </div>
     </div>
@@ -184,7 +177,7 @@
       </div>
 
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Comandi</h1>
+        <h1 class="w3-margin w3-xlarge w3-animate-right">Comandi</h1>
 
         <p class="w3-text-grey">Il comando build, crea l'immagine seguendo le
           info specificate nel dockerfile della directory del nostro progetto.
@@ -204,7 +197,7 @@
       
 
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-left">Creare un'immagine</h1>
+        <h1 class="w3-margin w3-xlarge w3-animate-left">Creare un'immagine</h1>
         <p class="w3-text-grey">Per usare docker bisogna installare il software Docker
           Desktop, esso permette di vedere tramite gui la lista dei container in esecuzione.
         </p>
@@ -231,7 +224,7 @@
         <img src="img/container.png">
       </div>
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Avviare un Container</h1>
+        <h1 class="w3-margin w3-xlarge w3-animate-right">Avviare un Container</h1>
         <p class="w3-text-grey">Solo una prova
         </p>
         <p class="w3-text-grey">Solo una prova
