@@ -1,3 +1,4 @@
-FROM httpd:2.4
-WORKDIR /usr/local/apache2/htdocs/
-
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
+COPY . .
+EXPOSE 80
