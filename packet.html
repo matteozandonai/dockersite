@@ -68,7 +68,7 @@
       <div class="w3-third w3-center">
        <div class="w3-panel w3-card w3-animate-opacity w3-blue">
           <h4>File Compose YAML</h4>
-          <div class="w3-code htmlHigh notranslate  w3-black w3-text-orange">
+          <div class="w3-code htmlHigh notranslate w3-pale-blue w3-text-purple">
             version: 3<br>
             services:<br>
             angular:<br>
@@ -78,19 +78,17 @@
             flask:<br>
             build:<br>
             context: flask<br>
-            volumes: - ./flask/data:/data<br>
+            volumes: ./flask/data:/data<br>
             mysql:<br>
             image: mysql:5.7<br>
             restart: always<br>
             ports:<br>
             - 27017:27017<br>
             environment:<br>
-            MYSQL_ROOT_USERNAME: root<br>
-            MYSQL_ROOT_PASSWORD: example<br>
+            MYSQL_ROOT_USERNAME:root<br>
+            MYSQL_ROOT_PASSWORD:example<br>
             volumes:<br>
-            - mysql-data-volume:/data/db<br>
-            volumes:<br>
-            mysql-data-volume:<br>
+            mysql-data-volume:/dt/db<br>
           </div>
         </div>
       </div>
@@ -138,7 +136,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity" id="social">
+  <footer class="w3-container w3-white w3-padding-64 w3-center w3-opacity" id="social">
     <div class="w3-xlarge w3-padding-32">
       <a href="https://www.instagram.com/dockerinc/" target="_blank"><i
           class="fa fa-instagram w3-hover-opacity"></i></a>
