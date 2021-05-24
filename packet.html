@@ -22,19 +22,19 @@
         href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="img/whale.png"></a>
       <a href="#compose" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Compose</a>
-      <a href="#ufficio" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ufficio</a>
+      <a href="#ufficio" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Data Center</a>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-large">
       <a href="#compose" class="w3-bar-item w3-button w3-padding-large">Compose</a>
-      <a href="#ufficio" class="w3-bar-item w3-button w3-padding-large">Ufficio</a>
+      <a href="#ufficio" class="w3-bar-item w3-button w3-padding-large">Data Center</a>
     </div>
   </div>
 
   <!-- Header -->
   <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo w3-animate-fading">PACKET TRACER</h1>
+    <h1 class="w3-margin w3-jumbo w3-animate-fading">DOCKER IN AZIENDA</h1>
     <h1 class="w3-margin w3-large w3-animate-bottom">Matteo Zandonai</h1>
     <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
   </header>
@@ -46,62 +46,73 @@
       </div>
 
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Docker in azienda</h1>
-        <p class="w3-text-grey">In azienda viene usato sempre più spesso
-        Docker compose; è uno strumento per l'esecuzione di app multi-container. 
-        Grazie a un file Compose si creano e si avviano tutti i servizi della propria configurazione.
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">Docker Compose</h1>
+        <p class="w3-text-grey">Un tool che permette la definizione e l'esecuzione
+          di applicazioni multi-container, può essere definito come un orchestratore
+          che però al contrario di Kubernetes e Swarm non può gestire host multipli. 
         </p>
-        <p class="w3-text-grey">Per esempio se si vuole creare una applicazione web
-        si dovranno utilizzare vari servizi, come: Angular (Frontend), Flask (Backend), 
-        MySQL (Database).
+        <p class="w3-text-grey">Docker Compose viene utilizzato sempre più spesso dalle
+          aziende sopratutto per l'esecuzione di app che necessitano di un back-end e di un
+          front-end, per la realizzazione verranno quindi usati vari servizi, per esempio:
+          Angular, Flask, MySQL.
         </p>
-        <p class="w3-text-grey">Ogni servizio ha bisogno di un Dockerfile, che
-        viene buildato per creare l'immagine, per far si che avvenga tutto questo
-        va creato un file compose che desciva le nostre esigenze.
+        <p class="w3-text-grey">Per ognuno di questi servizi va compilato un Dockerfile
+          con le caratteristiche che definiscono il servizio stesso. Tutti i vari Dockerfile,
+          con l'avvio di docker compose, verranno trasformati in immagini, le quali verranno
+          gestite in ambienti isolati.
+        </p>
+        <p class="w3-text-grey">Per eseguire un'app multi-container occorre la stesura
+          di un file di configurazione chiamato: docker-compose.yaml, questo file si
+          riferisce ai vari Dockerfile presenti nel progetto.
         </p>
       </div>
     </div>
   </div>
 
- <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="compose">
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="compose">
     <div class="w3-content">
       <div class="w3-third w3-center">
-       <div class="w3-panel w3-card w3-animate-opacity w3-blue">
+        <div class="w3-panel w3-card w3-animate-opacity w3-blue">
           <h4>File Compose YAML</h4>
           <div class="w3-code htmlHigh notranslate w3-pale-blue w3-text-purple">
-            version: 3<br>
+            version: "3.5"<br>
             services:<br>
-            angular:<br>
+            backend:<br>
             build:<br>
-            context: angular<br>
-            ports: - 5000:5000<br>
-            flask:<br>
-            build:<br>
-            context: flask<br>
-            volumes: ./flask/data:/data<br>
-            mysql:<br>
-            image: mysql:5.7<br>
-            restart: always<br>
+            context: ./backend<br>
+            dockerfile: Dockerfile<br>
             ports:<br>
-            - 27017:27017<br>
-            environment:<br>
-            MYSQL_ROOT_USERNAME:root<br>
-            MYSQL_ROOT_PASSWORD:example<br>
+            - "3000:3000"<br>
+            links:<br>
+            - mongo<br>
+            mongo:<br>
+            image: mongo<br>
             volumes:<br>
-            mysql-data-volume:/dt/db<br>
+            - ./db_vol/:/data/db<br>
+            ports:<br>
+            - "27018:27017"
           </div>
         </div>
       </div>
 
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-right">Compose file</h1>
-        <p class="w3-text-grey">Esso builda i Dockerfile e le corrispettive immagini,
-        in questo file vanno elencati i servizi che vogliamo utilizzare nell'applicazione.
+        <p class="w3-text-grey">Tramite Compose si possono creare tutti i servizi 
+          di una certa configurazione tramite un solo comando. Il file Compose si 
+          riferisce ai Dockerfile che
+          sono presenti nel progetto, in seguito poi la tecnologia di Compose
+          realizza per noi (in qualche secondo) tutte le immagini necessarie.
         </p>
-        <p class="w3-text-grey">Come si vede dall'esempio 
+        <p class="w3-text-grey">Come si vede dall'esempio, nel file yaml vanno 
+          specificati vari campi come:<br>
         </p>
-        <p class="w3-text-grey">
-        </p>
+        <p class="w3-text-blue">Version, Context, Dockerfile, Ports, Links, Volumes</p>
+
+        <p class="w3-text-grey">Dopo aver specificato questi campi si può
+          procedere con l'avvio di Docker Compose, tramite il comando:</p>
+        <p class="w3-text-blue">docker-compose up</p>
+        <p class="w3-text-grey">E per fermare Compose si usa il comando:</p>
+        <p class="w3-text-blue">docker-compose down</p>
       </div>
     </div>
   </div>
@@ -109,23 +120,23 @@
   <div class="slideshow-container" id="ufficio">
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <img src="img/topologia.png" style="width:100%">
+      <img src="img/.png" style="width:100%">
     </div>
-  
+
     <div class="mySlides fade">
-      <img src="img/topologia.png" style="width:100%">
+      <img src="img/.png" style="width:100%">
     </div>
-  
+
     <div class="mySlides fade">
-      <img src="img/topologia.png" style="width:100%">
+      <img src="img/.png" style="width:100%">
     </div>
-  
+
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
-  
+
   <!-- The dots/circles -->
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
@@ -147,6 +158,6 @@
     <p>Info by <a href="https://www.docker.com/" target="_blank">docker official website</a></p>
   </footer>
 
-<script src="js/packet.js"></script>
+  <script src="js/packet.js"></script>
 </body>
 </html>

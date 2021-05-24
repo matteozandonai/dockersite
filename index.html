@@ -48,7 +48,7 @@
   <div class="w3-row-padding w3-padding-64 w3-container" id="cosè">
     <div class="w3-content">
       <div class="w3-twothird">
-        
+
         <h1 class="w3-margin w3-xxlarge w3-animate-left">Iniziare con Docker</h1>
         <p class="w3-text-grey">Docker è una piattaforma software che
           ci permette di creare, sviluppare e distribuire applicazioni molto rapidamente.
@@ -80,12 +80,15 @@
         </p>
         <p class="w3-text-grey">
         </p>
-        <p class="w3-text-grey"><img src="img/dockerfile-logo.png">  Dockerfile: è un file sul quale vengono scritte le istruzione per
+        <p class="w3-text-grey"><img src="img/dockerfile-logo.png"> Dockerfile: è un file sul quale vengono scritte le
+          istruzione per
           costruire l'immagine.
         </p>
-        <p class="w3-text-grey"><img src="img/image-logo.png">  Image: è un template nel quale viene tradotto il Dockerfile.
+        <p class="w3-text-grey"><img src="img/image-logo.png"> Image: è un template nel quale viene tradotto il
+          Dockerfile.
         </p>
-        <p class="w3-text-grey"><img src="img/container-logo.png"> Container: sono processi in esecuzione che contengono il progetto.
+        <p class="w3-text-grey"><img src="img/container-logo.png"> Container: sono processi in esecuzione che contengono
+          il progetto.
         </p>
       </div>
     </div>
@@ -109,7 +112,7 @@
     </div>
   </div>
 
-<!-- Fourth Grid -->
+  <!-- Fourth Grid -->
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="dockerfile">
     <div class="w3-content">
       <div class="w3-third w3-center">
@@ -117,12 +120,10 @@
         <div class="w3-panel w3-card w3-animate-opacity w3-blue">
           <h4>Directory</h4>
           <div class="w3-code htmlHigh notranslate  w3-pale-blue w3-text-purple">
-            FROM node:12-alpine<br>
-            RUN apk add --no-cache python g++ make<br>
-            WORKDIR /app<br>
+            FROM nginx:latest<br>
+            WORKDIR /usr/share/nginx/html<br>
             COPY . .<br>
-            RUN yarn install --production<br>
-            CMD ["node", "src/index.js"]<br>
+            EXPOSE 80<br>
           </div>
         </div>
       </div>
@@ -134,7 +135,7 @@
           Con il completamento dell'applicazione si può procedere
           con la containerizzazione, questa fase è composta da vari passaggi.
         </p>
-        <p class="w3-text-grey">Si continua con la creazione del Dockerfile nella 
+        <p class="w3-text-grey">Si continua con la creazione del Dockerfile nella
           directory del progetto, questo file specifica le caratteristiche dell'
           immagine che andremo a creare.
         </p>
@@ -156,14 +157,14 @@
         <p class="w3-text-blue">docker build -t my-site .
         </p>
         <p class="w3-text-grey">Il comando riportato sopra crea un'immagine
-          chiamata my-dockersite, è come un vero e proprio sistema operativo, 
+          chiamata my-dockersite, è come un vero e proprio sistema operativo,
           un vero e proprio computer che contiene il nostro progetto.
         </p>
         <p class="w3-text-grey">
         </p>
       </div>
       <div class="w3-third w3-center">
-        <img src="img/ubuntu.png">
+        <img src="img/node.png">
       </div>
     </div>
   </div>
@@ -181,6 +182,7 @@
         </p>
         <p class="w3-text-blue">docker run -dit --name container1 -p 5500:80 my-site
         </p>
+
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
           se questo container viene hostato sul browser sarà visibile il progetto!
         </p>
@@ -189,7 +191,7 @@
     </div>
   </div>
 
-<div class="w3-container w3-padding-30 w3-center w3-opacity" id="social">
+  <div class="w3-container w3-padding-30 w3-center w3-opacity" id="social">
     <div class="w3-xlarge w3-padding-32">
       <a href="https://www.instagram.com/dockerinc/" target="_blank"><i
           class="fa fa-instagram w3-hover-opacity"></i></a>
@@ -200,10 +202,8 @@
     <p>Info by <a href="https://www.docker.com/" target="_blank">docker official website</a></p>
   </div>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
-
-
-
 https://www.w3schools.com/w3css/w3css_colors.asp
