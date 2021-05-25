@@ -34,7 +34,7 @@
 
   <!-- Header -->
   <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo w3-animate-fading">DOCKER IN AZIENDA</h1>
+    <h1 class="w3-margin w3-jumbo w3-animate-fading">COMPOSE</h1>
     <h1 class="w3-margin w3-large w3-animate-bottom">Matteo Zandonai</h1>
     <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
   </header>
@@ -46,7 +46,7 @@
       </div>
 
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xxlarge w3-animate-right">Docker Compose</h1>
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">App multi-container</h1>
         <p class="w3-text-grey">Un tool che permette la definizione e l'esecuzione
           di applicazioni multi-container, può essere definito come un orchestratore
           che però al contrario di Kubernetes e Swarm non può gestire host multipli. 
@@ -56,12 +56,7 @@
           front-end, per la realizzazione verranno quindi usati vari servizi, per esempio:
           Angular, Flask, MySQL.
         </p>
-        <p class="w3-text-grey">Per ognuno di questi servizi va compilato un Dockerfile
-          con le caratteristiche che definiscono il servizio stesso. Tutti i vari Dockerfile,
-          con l'avvio di docker compose, verranno trasformati in immagini, le quali verranno
-          gestite in ambienti isolati.
-        </p>
-        <p class="w3-text-grey">Per eseguire un'app multi-container occorre la stesura
+        <p class="w3-text-grey">L'esecuzione di un'app multi-container richiede la stesura
           di un file di configurazione chiamato: docker-compose.yaml, questo file si
           riferisce ai vari Dockerfile presenti nel progetto.
         </p>
@@ -103,12 +98,9 @@
           sono presenti nel progetto, in seguito poi la tecnologia di Compose
           realizza per noi (in qualche secondo) tutte le immagini necessarie.
         </p>
-        <p class="w3-text-grey">Come si vede dall'esempio, nel file yaml vanno 
-          specificati vari campi come:<br>
-        </p>
-        <p class="w3-text-blue">Version, Context, Dockerfile, Ports, Links, Volumes</p>
 
-        <p class="w3-text-grey">Dopo aver specificato questi campi si può
+        <p class="w3-text-grey">Dopo aver specificato i vari campi come 
+          nell'esempio si può
           procedere con l'avvio di Docker Compose, tramite il comando:</p>
         <p class="w3-text-blue">docker-compose up</p>
         <p class="w3-text-grey">E per fermare Compose si usa il comando:</p>
