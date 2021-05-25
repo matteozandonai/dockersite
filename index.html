@@ -50,51 +50,101 @@
       <div class="w3-twothird">
 
         <h1 class="w3-margin w3-xxlarge w3-animate-left">Iniziare con Docker</h1>
-        <p class="w3-text-grey">Docker è una piattaforma software che
-          ci permette di creare, sviluppare e distribuire applicazioni molto rapidamente.
+        <p class="w3-text-grey">Docker è un Container Software Platform Suite, cioè
+          un prodotto creato per semplificare l'esecuzione di applicazioni.
         </p>
-        <p class="w3-text-grey">Docker utilizza degli ambienti isolati di
-          sviluppo chiamati Container. Questi ambienti leggeri e veloci permettono
-          a sviluppatori e amministratori di creare, spedire e eseguire app
-          a basso costo e su qualsiasi scala.
+        <p class="w3-text-grey">La tecnologia di Docker permette 
+          ai Developer di creare, testare e distribuire 
+          applicazioni con un'alta rapidità, abbattendo notevolmente costi e complicazioni.
         </p>
       </div>
-
       <div class="w3-third w3-center">
         <img src="img/docker.png">
       </div>
     </div>
   </div>
 
-  <!-- Second Grid -->
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="architettura">
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
       <div class="w3-third w3-center">
-        <img src="img/cs.png">
+        <img src="img/vmachine.png">
       </div>
-
       <div class="w3-twothird">
-        <h1 class="w3-margin w3-xlarge w3-animate-right">Architettura Docker</h1>
-        <p class="w3-text-grey">Docker è basato su una architettura
-          Client - Server, i componenti principali da conoscere sono tre:
+        <h1 class="w3-margin w3-xlarge w3-animate-left">Docker vs Virtual Machine</h1>
+        <p class="w3-text-grey">Quando Docker fu rilasciato venne paragonato alle
+          classiche macchine virtuali, in realtà Docker ha un approccio totalmente
+          diverso. 
         </p>
-        <p class="w3-text-grey">
+        <p class="w3-text-grey">Le macchine virtuali emulano l'hardware, e il numero 
+          di macchine virtuali è sicuramente limitato mentre si potrebbero
+          avere centinaia di container sulla stessa macchina.
         </p>
-        <p class="w3-text-grey"><img src="img/dockerfile-logo.png"> Dockerfile: è un file sul quale vengono scritte le
-          istruzione per
-          costruire l'immagine.
-        </p>
-        <p class="w3-text-grey"><img src="img/image-logo.png"> Image: è un template nel quale viene tradotto il
-          Dockerfile.
-        </p>
-        <p class="w3-text-grey"><img src="img/container-logo.png"> Container: sono processi in esecuzione che contengono
-          il progetto.
+        <p class="w3-text-grey">Docker infatti viene eseguito direttamente sul sistema
+          operativo, tutti i container condividono lo stesso hardware e kernel della
+          macchina ospitante. Queste caratteristiche rendono i container veloci e leggeri.
         </p>
       </div>
     </div>
   </div>
 
-  <div class="w3-row-padding  w3-padding-64 w3-container" id="tooling">
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1 class="w3-margin w3-xlarge w3-animate-left">Architettura Docker</h1>
+        <div class="w3-panel w3-blue" id="pannellotext">
+        <p class="w3-blue" style="text-shadow:1px 1px 0 #444">Docker: è il componente client che invia
+        comandi e richieste al server.</p></div>
+
+        <div class="w3-panel w3-blue" id="pannellotext">
+        <p class="w3-blue" style="text-shadow:1px 1px 0 #444">DockerD: è il componente client che invia
+        comandi e richieste al server.</p></div>
+
+        <p class="w3-text-grey">Solitamente client e server si trovano sulla stessa macchina, il 
+          server si occupa dei container locali e l'utente interagisce attraverso il client. 
+          Il collegamento tra client e server sulla stessa macchina avviene tramite un socket Unix:
+        </p>
+
+        <p class="w3-text-red">/var/run/docker .sock
+        </p>
+      </div>
+      <div class="w3-third w3-center">
+        <img src="img/cs.png">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="tooling">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="">
+      </div>
+
+      <div class="w3-twothird">
+        <h1 class="w3-margin w3-xxlarge w3-animate-right">Tooling</h1>
+        <p class="w3-text-grey">Docker è basato su una architettura
+          Client - Server, in cui: 
+        </p>
+        <p class="w3-text-grey">docker è il componente client che invia comandi e 
+          richieste al server.
+        </p>
+        <p class="w3-text-grey"><img src="img/dockerfile-logo.png">
+          Dockerfile: è un file sul quale vengono scritte le istruzioni per
+          costruire l'immagine.
+        </p>
+        <p class="w3-text-grey"><img src="img/image-logo.png"> 
+          Image: è un template nel quale viene tradotto il Dockerfile.
+        </p>
+        <p class="w3-text-grey"><img src="img/container-logo.png"> Container:
+          è una sorta di bundle configurabile che contiene uno specifico applicativo, 
+          i suoi requisiti e le sue dipendenze.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding  w3-padding-64 w3-container" >
     <div class="w3-content">
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-left">Installazione</h1>

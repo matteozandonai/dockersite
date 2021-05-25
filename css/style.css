@@ -23,7 +23,14 @@ body,h1,h2,h3,h4,h5,h6 {
   padding-left: 10px;
   font-size: 15px;
 }
+.w3-text-red{
+  padding-left: 10px;
+  font-size: 15px;
+}
 
+#pannellotext{
+  border-radius: 5ch;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
