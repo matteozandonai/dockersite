@@ -39,7 +39,7 @@
 
   <!-- Header -->
   <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo w3-animate-fading">DOCKER</h1>
+    <h1 class="w3-margin w3-jumbo w3-animate-fading">DIOOO</h1>
     <h1 class="w3-margin w3-large w3-animate-bottom">Matteo Zandonai</h1>
     <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
   </header>
@@ -91,13 +91,16 @@
     <div class="w3-content">
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-left">Architettura Docker</h1>
+        <p class="w3-text-grey">Docker lavora secondo un'architettura Client - Server,
+          i componenti prendono i nomi di:
+        </p>
         <div class="w3-panel w3-blue" id="pannellotext">
-        <p class="w3-blue" style="text-shadow:1px 1px 0 rgb(0, 0, 0)">Docker: è il componente client che invia
-        comandi e richieste al server.</p></div>
+        <p class="w3-blue" style="text-shadow:1px 1px 0 rgb(0, 0, 0)">Docker-Client: componente client che invia
+        comandi e richieste al server</p></div>
 
         <div class="w3-panel w3-blue" id="pannellotext">
-        <p class="w3-blue" style="text-shadow:1px 1px 0 #444">DockerD: è il componente client che invia
-        comandi e richieste al server.</p></div>
+        <p class="w3-blue" style="text-shadow:1px 1px 0 #444">Docker-Daemon: componente server che
+        gestisce i container, rispondendo alle richieste del client</p></div>
 
         <p class="w3-text-grey">Solitamente client e server si trovano sulla stessa macchina, il 
           server si occupa dei container locali e l'utente interagisce attraverso il client. 
@@ -128,15 +131,15 @@
         <p class="w3-text-grey">
         </p>
         <p class="w3-text-grey"><img src="img/dockerfile-logo.png">
-          Dockerfile: è un file sul quale vengono scritte le istruzioni per
-          costruire l'immagine.
+          Dockerfile: è la ricetta dell'immagine,
+          un file di testo che ci permette di esprimere le personalizzazioni
+          che vogliamo apportare all'immagine di partenza.
         </p>
         <p class="w3-text-grey"><img src="img/image-logo.png"> 
-          Image: è un template nel quale viene tradotto il Dockerfile.
+          Image: è il risultato della compilazione del Dockerfile.
         </p>
         <p class="w3-text-grey"><img src="img/container-logo.png"> Container:
-          è una sorta di bundle configurabile che contiene uno specifico applicativo, 
-          i suoi requisiti e le sue dipendenze.
+          è un'istanza di realizzazione di un'immagine.
         </p>
       </div>
     </div>
