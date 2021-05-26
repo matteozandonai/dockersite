@@ -30,6 +30,7 @@ body,h1,h2,h3,h4,h5,h6 {
 
 #pannellotext{
   border-radius: 5ch;
+  width: 80%;
 }
 /* Clear floats after the columns */
 .row:after {
