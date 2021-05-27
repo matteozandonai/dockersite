@@ -95,16 +95,19 @@
         <p class="w3-text-grey">Docker lavora secondo un'architettura Client - Server,
           i componenti prendono i nomi di:
         </p>
-        <a class="grassetto-arch">Docker-Client: componente client che invia
-          comandi e richieste al server</a>
-          <a class="grassetto-arch">Docker-Daemon: componente server che
-            gestisce i container, rispondendo alle richieste del client</a>
-        
+        <p class="grassetto-arch">Docker-Client:
+          <a class="grassetto-gr">componente client che invia
+            comandi e richieste al server</a>
+
+            <p class="grassetto-arch">Docker-Client:
+              <a class="grassetto-gr">componente server che gestisce i container 
+                e esegue le richieste del client.
+              </a>
 
         <p class="w3-text-grey">Solitamente client e server si trovano sulla stessa macchina, il 
           server si occupa dei container locali e l'utente interagisce attraverso il client. 
           Il collegamento tra client e server sulla stessa macchina avviene tramite un socket Unix:
-          <a class="grassetto-arch">/var/run/docker .sockt</a>
+          <a class="grassetto-path">/var/run/docker .sockt</a>
         </p>
 
         <p class="w3-text-red">
@@ -116,7 +119,7 @@
     </div>
   </div>
 
-
+<hr>
   <!-- Second Grid -->
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="tooling">
     <div class="w3-content">
@@ -126,21 +129,31 @@
 
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Tooling</h1>
-        <p class="w3-text-grey">Docker è 
-          stato ideato per Linux, ma può essere utilizzato anche su altri
+        <p class="w3-text-grey">
+          Docker è stato ideato per Linux, ma può essere utilizzato anche su altri
           sistemi operativi come Windows, i componenti principali da tenere
           in considerazione sono:
         </p>
-        <p class="w3-text-grey"><img src="img/dockerfile-logo.png">
-          Dockerfile: è la ricetta dell'immagine,
+        <div class="dockerfile">
+       <img src="img/dockerfile-logo.png">
+          <a class="grassetto">Dockerfile:</a>
+        <a class="grassetto-gr">  è la ricetta dell'immagine,
           un file di testo che ci permette di esprimere le personalizzazioni
           che vogliamo apportare all'immagine di partenza.
-        </p>
-        <p class="w3-text-grey"><img src="img/image-logo.png"> 
-          Image: è il risultato della compilazione del Dockerfile.
-        </p>
-        <p class="w3-text-grey"><img src="img/container-logo.png"> Container:
-          è un'istanza di realizzazione di un'immagine.
+        </a>
+      </div>
+      <div class="images">
+        <img src="img/image-logo.png"> 
+        <a class="grassetto">Image: </a>
+        <a class="grassetto-gr"> è il risultato della compilazione del Dockerfile.</a>
+      </div>
+      
+      <div class="container">
+        <img src="img/container-logo.png">
+        <a class="grassetto">Container: </a>
+        <a class="grassetto-gr"> è un'istanza di realizzazione di un'immagine.</a>
+      </div>
+
         </p>
       </div>
     </div>

@@ -43,21 +43,47 @@ body,h1,h2,h3,h4,h5,h6 {
 display: inline;
 }
 
+
+
+
+
+
 .grassetto{
   color: black;
   font-weight: 700;
-  
 }
 .grassetto-arch{
   color: black;
   font-weight: 700;
   padding-left: 10px;
 }
+.grassetto-gr{
+  color: #757575!important;
+  font-weight: 200;
+}
 .grassetto-compose{
   color: rgb(187, 71, 187);
   font-weight: 700;
 }
-.grassetto-com{
+.grassetto-command{
   color: #2196F3;
   font-weight: 700;
+}
+.grassetto-path{
+  color: red;
+  font-weight: 700;
+}
+
+.dockerfile{
+padding-left: 10px;
+}
+
+.images{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.container{
+  padding-left: 10px;
+  padding-top: 10px;
 }
