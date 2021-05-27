@@ -38,3 +38,26 @@ body,h1,h2,h3,h4,h5,h6 {
   display: table;
   clear: both;
 }
+
+.containerp { 
+display: inline;
+}
+
+.grassetto{
+  color: black;
+  font-weight: 700;
+  
+}
+.grassetto-arch{
+  color: black;
+  font-weight: 700;
+  padding-left: 10px;
+}
+.grassetto-compose{
+  color: rgb(187, 71, 187);
+  font-weight: 700;
+}
+.grassetto-com{
+  color: #2196F3;
+  font-weight: 700;
+}

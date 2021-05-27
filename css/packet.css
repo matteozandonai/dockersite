@@ -22,6 +22,18 @@ body,h1,h2,h3,h4,h5,h6 {
 .w3-text-blue{
   padding-left: 10px;
 }
+.grassetto{
+  color: black;
+  font-weight: 700;
+}
+.grassetto-compose{
+  color: rgb(187, 71, 187);
+  font-weight: 700;
+}
+.grassetto-com{
+  color: #2196F3;
+  font-weight: 700;
+}
 
 * {box-sizing:border-box}
 

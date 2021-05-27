@@ -39,7 +39,7 @@
 
   <!-- Header -->
   <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo w3-animate-fading">DIOOO</h1>
+    <h1 class="w3-margin w3-jumbo w3-animate-fading">DOCKER</h1>
     <h1 class="w3-margin w3-large w3-animate-bottom">Matteo Zandonai</h1>
     <!-- <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
   </header>
@@ -50,7 +50,8 @@
       <div class="w3-twothird">
 
         <h1 class="w3-margin w3-xxlarge w3-animate-left">Iniziare con Docker</h1>
-        <p class="w3-text-grey">Docker è un Container Software Platform Suite, cioè
+        <p class="w3-text-grey">Docker è un <a class="grassetto">Container Software Platform Suite</a>
+          , cioè
           un prodotto creato per semplificare l'esecuzione di applicazioni.
         </p>
         <p class="w3-text-grey">La tecnologia di Docker permette 
@@ -71,7 +72,7 @@
       </div>
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-left">Docker vs Virtual Machine</h1>
-        <p class="w3-text-grey">Quando Docker fu rilasciato venne paragonato alle
+        <p class="w3-text-grey">Quando Docker fu rilasciato nel 2014 venne paragonato alle
           classiche macchine virtuali, in realtà Docker ha un approccio totalmente
           diverso. 
         </p>
@@ -94,20 +95,19 @@
         <p class="w3-text-grey">Docker lavora secondo un'architettura Client - Server,
           i componenti prendono i nomi di:
         </p>
-        <div class="w3-panel w3-blue" id="pannellotext">
-        <p class="w3-blue" style="text-shadow:1px 1px 0 rgb(0, 0, 0)">Docker-Client: componente client che invia
-        comandi e richieste al server</p></div>
-
-        <div class="w3-panel w3-blue" id="pannellotext">
-        <p class="w3-blue" style="text-shadow:1px 1px 0 #444">Docker-Daemon: componente server che
-        gestisce i container, rispondendo alle richieste del client</p></div>
+        <a class="grassetto-arch">Docker-Client: componente client che invia
+          comandi e richieste al server</a>
+          <a class="grassetto-arch">Docker-Daemon: componente server che
+            gestisce i container, rispondendo alle richieste del client</a>
+        
 
         <p class="w3-text-grey">Solitamente client e server si trovano sulla stessa macchina, il 
           server si occupa dei container locali e l'utente interagisce attraverso il client. 
           Il collegamento tra client e server sulla stessa macchina avviene tramite un socket Unix:
+          <a class="grassetto-arch">/var/run/docker .sockt</a>
         </p>
 
-        <p class="w3-text-red">/var/run/docker .sock
+        <p class="w3-text-red">
         </p>
       </div>
       <div class="w3-third w3-center">
@@ -126,9 +126,10 @@
 
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xxlarge w3-animate-right">Tooling</h1>
-        <p class="w3-text-grey">
-        </p>
-        <p class="w3-text-grey">
+        <p class="w3-text-grey">Docker è 
+          stato ideato per Linux, ma può essere utilizzato anche su altri
+          sistemi operativi come Windows, i componenti principali da tenere
+          in considerazione sono:
         </p>
         <p class="w3-text-grey"><img src="img/dockerfile-logo.png">
           Dockerfile: è la ricetta dell'immagine,
@@ -154,7 +155,7 @@
           di visuallizare le immagini e i container in esecuzione.
         </p>
         <p class="w3-text-grey">Per utilizzare Docker durante lo sviluppo delle
-          applicazioni sul proprio IDE bisogna installare l'apposita estensione.
+          applicazioni sul proprio IDE si consiglia di installare l'apposita estensione.
         </p>
       </div>
       <div class="w3-third w3-center">
@@ -169,7 +170,7 @@
       <div class="w3-third w3-center">
         <!---->
         <div class="w3-panel w3-card w3-animate-opacity w3-blue">
-          <h4>Directory</h4>
+          <h4>Dockerfile</h4>
           <div class="w3-code htmlHigh notranslate  w3-pale-blue w3-text-purple">
             FROM nginx:latest<br>
             WORKDIR /usr/share/nginx/html<br>
@@ -205,10 +206,10 @@
         <p class="w3-text-grey">Dopo aver compilato il Dockerfile, per creare l'
           immagine basta eseguire un semplice comando nel terminale del nostro IDE.
         </p>
-        <p class="w3-text-blue">docker build -t my-site .
+        <p class="w3-text-blue">docker build -t elaborato .
         </p>
         <p class="w3-text-grey">Il comando riportato sopra crea un'immagine
-          chiamata my-dockersite, è come un vero e proprio sistema operativo,
+          chiamata elaborato, è come un vero e proprio sistema operativo,
           un vero e proprio computer che contiene il nostro progetto.
         </p>
         <p class="w3-text-grey">
@@ -231,11 +232,13 @@
         <p class="w3-text-grey">Dopo la creazione dell'immagine, per avviare il container
           basta eseguire un banale comando simile a quello che è stato usato prima.
         </p>
-        <p class="w3-text-blue">docker run -dit --name container1 -p 5500:80 my-site
+        <p class="w3-text-blue">docker run -dit --name cont-elaborato -p 5502:80 elaborato
         </p>
 
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
-          se questo container viene hostato sul browser sarà visibile il progetto!
+          se questo container viene hostato sul browser sarà visibile il progetto.
+          Se non impostassimo il mapping tra container e host il progetto non sarebbe
+          visibile tramite browser.
         </p>
       </div>
 
