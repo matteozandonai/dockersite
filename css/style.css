@@ -74,6 +74,11 @@ display: inline;
   font-weight: 700;
 }
 
+.grassetto-links{
+  font-weight: 700;
+  color: black;
+}
+
 .dockerfile{
 padding-left: 10px;
 }

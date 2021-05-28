@@ -163,11 +163,15 @@
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-left">Installazione</h1>
         <p class="w3-text-grey">Docker può essere utilizzato a riga di comando
-          oppure tramite l'apposito docker desktop, il software che ci permette
+          oppure tramite l'apposito 
+          <a class="grassetto-links" href="https://www.docker.com/products/docker-desktop" target="_blank">
+            Docker Desktop</a>, il software che ci permette
           di visuallizare le immagini e i container in esecuzione.
         </p>
         <p class="w3-text-grey">Per utilizzare Docker durante lo sviluppo delle
-          applicazioni sul proprio IDE si consiglia di installare l'apposita estensione.
+          applicazioni sul proprio IDE si consiglia di installare
+          <a class="grassetto-links" href="https://code.visualstudio.com/docs/containers/overview" target="_blank">
+            l'apposita estensione.</a>
         </p>
       </div>
       <div class="w3-third w3-center">
@@ -218,7 +222,7 @@
         <p class="w3-text-grey">Dopo aver compilato il Dockerfile, per creare l'
           immagine basta eseguire un semplice comando nel terminale del nostro IDE.
         </p>
-        <p class="w3-text-blue">docker build -t elaborato .
+        <p class="w3-text-blue">$ docker build -t elaborato .
         </p>
         <p class="w3-text-grey">Il comando riportato sopra crea un'immagine
           chiamata elaborato, è come un vero e proprio sistema operativo,
@@ -244,7 +248,7 @@
         <p class="w3-text-grey">Dopo la creazione dell'immagine, per avviare il container
           basta eseguire un banale comando simile a quello che è stato usato prima.
         </p>
-        <p class="w3-text-blue">docker run -dit --name cont-elaborato -p 5502:80 elaborato
+        <p class="w3-text-blue">$ docker run -dit --name cont-elaborato -p 5502:80 elaborato
         </p>
 
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
