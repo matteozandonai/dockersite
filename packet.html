@@ -51,19 +51,19 @@
           di applicazioni multi-container, può essere definito come un orchestratore
           di Dockerfile
           che però al contrario di <a class="grassetto">Kubernetes</a> e <a class="grassetto">Swarm</a>
-          non può gestire host multipli. 
+          non può gestire host multipli.
         </p>
-        <p class="w3-text-grey">Docker Compose viene utilizzato 
+        <p class="w3-text-grey">Docker Compose viene utilizzato
           sempre più spesso dalle
           aziende sopratutto per l'esecuzione di app che necessitano di un back-end e di un
           front-end, per la realizzazione verranno quindi usati vari servizi, per esempio:
           <a class="grassetto">Angular,</a>
           <a class="grassetto">Flask</a>
           <a class="grassetto">MySQL</a>
-          
+
 
         </p>
-        <p class="w3-text-grey">L'esecuzione richiede  un file di configurazione chiamato: 
+        <p class="w3-text-grey">L'esecuzione richiede un file di configurazione chiamato:
           <a class="grassetto-compose">docker-compose.yml</a>
         </p>
       </div>
@@ -98,35 +98,62 @@
 
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-right">Compose file</h1>
-        <p class="w3-text-grey">Tramite <a class="grassetto">Docker Compose</a> 
-          si possono creare tutti i servizi di una certa configurazione tramite un solo 
-          comando. 
-          La tecnologia di Compose 
+        <p class="w3-text-grey">Tramite <a class="grassetto">Docker Compose</a>
+          si possono creare tutti i servizi di una certa configurazione tramite un solo
+          comando.
+          La tecnologia di Compose
           realizza per noi in pochi secondi tutte le immagini necessarie per il funzionamento
           dell'applicazione.
         </p>
-        <p class="w3-text-grey"><a class="grassetto">Compose</a> 
+        <p class="w3-text-grey"><a class="grassetto">Compose</a>
           viene usato solitamente per l'esecuzione di applicazioni che necessitano
           di un back-end e di un front-end, ma può essere anche usato per eseguire un
           singolo container mantendendo tutte le specifiche di esecuzione.
         </p>
 
-        <p class="w3-text-grey"> 
-         
+        <p class="w3-text-grey">
+
         </p>
 
 
-        <p class="w3-text-grey">Dopo aver specificato i vari campi come 
+        <p class="w3-text-grey">Dopo aver specificato i vari campi come
           nell'esempio si può
           procedere con l'avvio di Docker Compose, tramite il comando:
           <a class="grassetto-com">$ docker-compose up</a></p>
-        
+
         <p class="w3-text-grey">Per fermare Compose si esegue il comando:
           <a class="grassetto-com">$ docker-compose down</a>
         </p>
       </div>
     </div>
   </div>
+
+
+  <div class="w3-row-padding w3-padding-64 w3-container" id="cosè">
+    <div class="w3-content">
+      <div class="w3-twothird">
+
+        <h1 class="w3-margin w3-xxlarge w3-animate-left">Rete con Kubernetes</h1>
+        <p class="w3-text-grey"><a class="grassetto">Kubernetes</a>
+          , un orchestratore che si occupa di distribuire i container 
+          attreaverso cluster di macchine fisiche o virtuali, automatizzando la
+          distribuzione e la disponibilità di applicazioni basate su container.          
+        </p>
+        <p class="w3-text-grey">La tecnologia di Docker permette
+          ai Developer di creare, testare e distribuire
+          applicazioni con un'alta rapidità, abbattendo notevolmente costi e complicazioni.
+        </p>
+      </div>
+      <div class="w3-third w3-center">
+        <img src="img/kuber.png">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
   <div class="slideshow-container" id="ufficio">
     <!-- Full-width images with number and caption text -->
@@ -171,4 +198,5 @@
 
   <script src="js/packet.js"></script>
 </body>
+
 </html>
