@@ -86,11 +86,6 @@
           operativo, tutti i container condividono lo stesso hardware e kernel della
           macchina ospitante. Queste caratteristiche rendono i container veloci e leggeri.
         </p>
-        serve per containerizzare le app
-      non serve installare tutte le dipendenze e i programmi 
-      se un server cade viene istituito un nuovo container
-
-      log, per vedere gli errori
       </div>
     </div>
   </div>
@@ -114,7 +109,7 @@
         <p class="w3-text-grey">Solitamente client e server si trovano sulla stessa macchina, il 
           server si occupa dei container locali e l'utente interagisce attraverso il client. 
           Il collegamento tra client e server sulla stessa macchina avviene tramite un socket Unix:
-          <a class="grassetto-path">/var/run/docker .sockt</a>
+          <a class="grassetto-path">/var/run/docker .sock</a>
         </p>
 
         <p class="w3-text-red">
@@ -227,7 +222,7 @@
         <p class="w3-text-grey">Dopo aver compilato il Dockerfile, per creare l'
           immagine basta eseguire un semplice comando nel terminale del nostro IDE.
         </p>
-        <p class="w3-text-blue">$ docker build elaborato .
+        <p class="w3-text-blue">$ docker build -t elaborato .
         </p>
         <p class="w3-text-grey">Il comando riportato sopra crea un'immagine
           chiamata elaborato, è come un vero e proprio sistema operativo,
@@ -253,7 +248,7 @@
         <p class="w3-text-grey">Dopo la creazione dell'immagine, per avviare il container
           basta eseguire un banale comando simile a quello che è stato usato prima.
         </p>
-        <p class="w3-text-blue">$ docker run --name container1 -p 5501:80 elaborato
+        <p class="w3-text-blue">$ docker run -d --name container1 -p 80:80 elaborato
         </p>
 
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
