@@ -74,7 +74,7 @@
       </div>
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-left">Docker vs Virtual Machine</h1>
-        <p class="w3-text-grey">Quando Docker fu rilasciato nel 2014 venne paragonato alle
+        <p class="w3-text-grey">Quando Docker fu rilasciato nel 2013 venne paragonato alle
           classiche macchine virtuali, in realtà Docker ha un approccio totalmente
           diverso. 
         </p>
@@ -86,6 +86,11 @@
           operativo, tutti i container condividono lo stesso hardware e kernel della
           macchina ospitante. Queste caratteristiche rendono i container veloci e leggeri.
         </p>
+        serve per containerizzare le app
+      non serve installare tutte le dipendenze e i programmi 
+      se un server cade viene istituito un nuovo container
+
+      log, per vedere gli errori
       </div>
     </div>
   </div>
@@ -222,7 +227,7 @@
         <p class="w3-text-grey">Dopo aver compilato il Dockerfile, per creare l'
           immagine basta eseguire un semplice comando nel terminale del nostro IDE.
         </p>
-        <p class="w3-text-blue">$ docker build -t elaborato .
+        <p class="w3-text-blue">$ docker build elaborato .
         </p>
         <p class="w3-text-grey">Il comando riportato sopra crea un'immagine
           chiamata elaborato, è come un vero e proprio sistema operativo,
@@ -248,7 +253,7 @@
         <p class="w3-text-grey">Dopo la creazione dell'immagine, per avviare il container
           basta eseguire un banale comando simile a quello che è stato usato prima.
         </p>
-        <p class="w3-text-blue">$ docker run -dit --name cont-elaborato -p 5502:80 elaborato
+        <p class="w3-text-blue">$ docker run --name container1 -p 5501:80 elaborato
         </p>
 
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
