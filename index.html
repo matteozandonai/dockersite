@@ -55,11 +55,12 @@
           un prodotto creato per semplificare l'esecuzione e lo sviluppo di applicazioni.
         </p>
         <p class="w3-text-grey">La tecnologia di Docker permette 
-          ai Developer di creare, testare e distribuire 
-          applicazioni con un'alta rapidità, abbattendo notevolmente costi e complicazioni 
-          visto che non è necessario configuare la macchina ogni volta che ci si lavora, l'ambiente di
-          sviluppo è il container, cioè l'istanza dell'immagine.
+          ai developer di creare, testare e distribuire 
+          applicazioni con un'alta rapidità, abbattendo notevolmente costi e complicazioni.
         </p>
+        <p class="w3-text-grey">L’idea della containerizzazione è proprio quella di permettere a una data 
+          applicazione di essere eseguita su qualsiasi tipo di sistema, dato che tutte le sue 
+          dipendenze sono già incluse nel container stesso.</p>
       </div>
       <div class="w3-third w3-center">
         <img src="img/docker.png">
@@ -224,11 +225,14 @@
         </p>
         <p class="w3-text-blue">$ docker build -t elaborato .
         </p>
-        <p class="w3-text-grey">Il comando riportato sopra crea un'immagine
-          chiamata elaborato, è come un vero e proprio sistema operativo,
-          un vero e proprio computer che contiene il nostro progetto.
+        <p class="w3-text-grey">Il comando riportato sopra dice a Docker di cercare ed eseguire
+          il Dockerfile che si trova nella directory corrente (.), il quale contiene tutte le specifiche
+          dell'immagine.  
         </p>
         <p class="w3-text-grey">
+          Una volta eseguito verrà buildata un'immagine
+          chiamata "elaborato", è come un vero e proprio sistema operativo che
+          contiene il nostro progetto.
         </p>
       </div>
       <div class="w3-third w3-center">
@@ -252,9 +256,11 @@
         </p>
 
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
-          se questo container viene hostato sul browser sarà visibile il progetto.
-          Se non impostassimo il mapping tra container e host il progetto non sarebbe
-          visibile tramite browser.
+          grazie al mapping 
+          <a class="grassetto-links" target="_blank">80:80</a>
+          il progetto sarà visibile sul browser tramite
+          <a class="grassetto-links" target="_blank">localhost:80</a>
+
         </p>
       </div>
 
