@@ -111,11 +111,6 @@
           singolo container mantendendo tutte le specifiche di esecuzione.
         </p>
 
-        <p class="w3-text-grey">
-
-        </p>
-
-
         <p class="w3-text-grey">Dopo aver specificato i vari campi come
           nell'esempio si può
           procedere con l'avvio di Docker Compose, tramite il comando:
@@ -133,22 +128,30 @@
     <div class="w3-content">
       <div class="w3-twothird">
 
-        <h1 class="w3-margin w3-xxlarge w3-animate-left">Rete con Kubernetes</h1>
-        <p class="w3-text-grey"><a class="grassetto">Kubernetes</a>
+        <h1 class="w3-margin w3-xxlarge w3-animate-left">Docker con Kubernetes</h1>
+        <p class="w3-text-grey"><a class="grassetto" href="https://kubernetes.io/" target="_blank">Kubernetes</a>
           è un orchestratore che si occupa di distribuire i container 
           attreaverso cluster di macchine fisiche o virtuali, automatizzando la
           distribuzione e la disponibilità di applicazioni basate su container.          
         </p>
         <p class="w3-text-grey">L'abbinamento <a class="grassetto" href="https://azure.microsoft.com/it-it/topic/kubernetes-vs-docker/"
-          target="_blank">
-          Docker-Kubernetes</a> 
+          target="_blank">Docker-Kubernetes</a> 
           è attualmente la miglior soluzione per 
           creare un ambiente di container solido ed efficiente, l'interazione tra i due è talmente
           forte che Docker può essere acquistato direttamente in combinazione con Kubernetes.
         </p>
+        <p class="w3-text-grey">Se</a> 
+          un server di cluster della rete sottostante dovesse cadere, Docker se ne accorgerebbe immediatamente
+          e instaurerebbe nuovi container identici per fare in modo che il servizio non smetta di funzionare.
+          
+        </p>
+        <p class="w3-text-grey"><a class="grassetto"></a> 
+          In seguito Kubernetes capirebbe in che modo e su quali altri server mandare i nuovi container;
+          tenendo conto del carico di lavoro e della disponibilità dei server stessi.
+        </p>
       </div>
       <div class="w3-third w3-center">
-        <img src="img/kuber.png">
+        <img src="img/kuber.png" id="regi">
       </div>
     </div>
   </div>
@@ -165,11 +168,7 @@
     </div>
 
     <div class="mySlides fade">
-      <img src="img/.png" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <img src="img/.png" style="width:100%">
+      <img src="img/espl.png" style="width:100%">
     </div>
 
     <!-- Next and previous buttons -->
@@ -182,7 +181,7 @@
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
+    
   </div>
 
   <!-- Footer -->

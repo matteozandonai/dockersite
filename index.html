@@ -24,16 +24,15 @@
       <a href="#cosè" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Iniziare</a>
       <a href="#tooling" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tooling</a>
       <a href="#dockerfile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Utilizzo</a>
-      <a href="packet.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">PT</a>
+      <a href="packet.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Compose e PT</a>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="#cosè" class="w3-bar-item w3-button w3-padding-large">Cos è?</a>
+      <a href="#cosè" class="w3-bar-item w3-button w3-padding-large">Iniziare</a>
       <a href="#tooling" class="w3-bar-item w3-button w3-padding-large">Tooling</a>
-      <a href="#immagini" class="w3-bar-item w3-button w3-padding-large">Immagini</a>
-      <a href="#dockerfile" class="w3-bar-item w3-button w3-padding-large">File</a>
-      <a href="packet.html" class="w3-bar-item w3-button w3-padding-large">PT</a>
+      <a href="#dockerfile" class="w3-bar-item w3-button w3-padding-large">Utilizzo</a>
+      <a href="packet.html" class="w3-bar-item w3-button w3-padding-large">Compose e PT</a>
     </div>
   </div>
 
@@ -236,7 +235,7 @@
         </p>
       </div>
       <div class="w3-third w3-center">
-        <img src="img/node.png">
+        <img src="img/node.png" id="regi">
       </div>
     </div>
   </div>
@@ -257,13 +256,11 @@
 
         <p class="w3-text-grey">Questo comando crea un container contenente la nostra immagine,
           grazie al mapping 
-          <a class="grassetto-links" target="_blank">80:80</a>
+          <a class="grassetto">80:80</a>
           il progetto sarà visibile sul browser tramite
-          <a class="grassetto-links" target="_blank">localhost:80</a>
-
+          <a class="grassetto">localhost:80</a>
         </p>
       </div>
-
     </div>
   </div>
 
@@ -272,14 +269,22 @@
       <div class="w3-twothird">
         <h1 class="w3-margin w3-xlarge w3-animate-left">Condividere l'immagine
         </h1>
-        <p class="w3-text-grey">
+        <p class="w3-text-grey">Se si vuol rendere pubblica e scaricabile la propria immagine e 
+          quindi il proprio progetto basta fare il push su un registry.
         </p>
-        <p class="w3-text-blue">$ docker build -t elaborato .
+       
+        <p class="w3-text-grey">In questo caso usiamo Docker Hub che è il registry di default,
+          basta accedere con il proprio account e creare un <a class="grassetto">repository</a>.
         </p>
-        <p class="w3-text-grey">
+
+        <p class="w3-text-grey">Dopo aver creato il repository come per esempio:
+          <a class="grassetto">xz4ndo/elaborato</a> basta rinomiare la propria immagine
+          con lo stesso nome del repository, quindi: <a class="grassetto">xz4ndo/elaborato</a>.
         </p>
-        <p class="w3-text-grey">
+        <p class="w3-text-grey">Per pushare l'immagine basta eseguire il seguente comando:
+          <a class="grassetto-com">$ docker push xz4ndo/elaborato</a> 
         </p>
+       
       </div>
       <div class="w3-third w3-center" >
         <img src="img/registry.png" id="regi">

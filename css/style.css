@@ -22,6 +22,7 @@ body,h1,h2,h3,h4,h5,h6 {
 .w3-text-blue{
   padding-left: 10px;
   font-size: 15px;
+  font-weight: 700;
 }
 .w3-text-red{
   padding-left: 10px;
@@ -50,7 +51,7 @@ display: inline;
 
 
 #regi{
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .grassetto{
@@ -71,7 +72,7 @@ display: inline;
   color: rgb(187, 71, 187);
   font-weight: 700;
 }
-.grassetto-command{
+.grassetto-com{
   color: #2196F3;
   font-weight: 700;
 }

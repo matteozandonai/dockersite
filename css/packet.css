@@ -24,7 +24,9 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 
-
+#regi{
+  max-width: 180px;
+}
 
 .grassetto{
   color: black;
@@ -51,7 +53,7 @@ body,h1,h2,h3,h4,h5,h6 {
   max-width: 680px;
   position: relative;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 10px;
   
 }
 
