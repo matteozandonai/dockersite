@@ -48,10 +48,16 @@ display: inline;
 
 
 
+
+#regi{
+  max-width: 200px;
+}
+
 .grassetto{
   color: black;
   font-weight: 700;
 }
+
 .grassetto-arch{
   color: black;
   font-weight: 700;
