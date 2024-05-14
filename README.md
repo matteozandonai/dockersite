@@ -1,21 +1,15 @@
-------------------------------------------------------------------
+# Docker Website
 
-Questo sito web è stato realizzato a scopo didattico, il suo scopo
-è quello di informare il lettore su come utilizzare "Docker" a 
-livello base.
+This website was created for educational purposes, its purpose
+is to inform the reader how to use "Docker" a
+basic level.
 
-------------------------------------------------------------------
+The website covers the following topics:
+- Create a project
+- Use Docker
+- Push the image to "Docker-Hub"
+- Docker Compose (YML files)
+- Kubernetes
+- Network example with Docker and Kubernetes
 
-Il sito web tratta i seguenti argomenti:
-- Creare un progetto
-- Utilizzare Docker
-- Fare il push dell'immagine su "Docker-Hub"
-- Docker Compose (file YML)
-- Kubernetes 
-- Esempio di rete con Docker e Kubernetes
-
-------------------------------------------------------------------
-
-Spero che sia d'aiuto.
-
-------------------------------------------------------------------
+I hope it helps.
